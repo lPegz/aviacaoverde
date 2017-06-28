@@ -1,14 +1,14 @@
 package br.unicamp.ic.aviacaoverde.controller;
 
-import br.unicamp.ic.aviacaoverde.model.Voo;
 import br.unicamp.ic.aviacaoverde.model.Reserva;
+import br.unicamp.ic.aviacaoverde.model.Voo;
 
 import java.util.Map;
 
 /**
  * Created by pegoraroluiz on 6/15/17.
  */
-public class ControladorDeVoo {
+public class ControladorDeReserva {
 
     public Reserva buscarReserva(Integer idPassageiro, Voo voo) {
         if (!existeReserva(idPassageiro, voo)) {

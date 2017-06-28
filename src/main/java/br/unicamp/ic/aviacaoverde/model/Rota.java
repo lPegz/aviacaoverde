@@ -1,8 +1,13 @@
 package br.unicamp.ic.aviacaoverde.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
 public class Rota {
 
 	private Aeroporto origem;
@@ -14,28 +19,5 @@ public class Rota {
 		escalas = new ArrayList<>();
 	}
 
-	public Aeroporto getOrigem() {
-		return origem;
-	}
-
-	public void setOrigem(Aeroporto origem) {
-		this.origem = origem;
-	}
-
-	public Aeroporto getDestino() {
-		return destino;
-	}
-
-	public void setDestino(Aeroporto destino) {
-		this.destino = destino;
-	}
-
-	public List<Aeroporto> getEscalas() {
-		return escalas;
-	}
-
-	public void setEscalas(List<Aeroporto> escalas) {
-		this.escalas = escalas;
-	}
 
 }

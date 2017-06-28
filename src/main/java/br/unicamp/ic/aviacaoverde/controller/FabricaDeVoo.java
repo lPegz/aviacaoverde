@@ -1,14 +1,15 @@
 package br.unicamp.ic.aviacaoverde.controller;
 
-import br.unicamp.ic.aviacaoverde.model.Voo;
-import br.unicamp.ic.aviacaoverde.model.Aeronave;
 import br.unicamp.ic.aviacaoverde.model.Aeroporto;
 import br.unicamp.ic.aviacaoverde.model.Rota;
+import br.unicamp.ic.aviacaoverde.model.Voo;
+
+import static br.unicamp.ic.aviacaoverde.controller.strategies.FabricaDeAeronaves.criarAeronave;
 
 /**
  * Created by pegoraroluiz on 6/15/17.
  */
-public class ConstrutorDeVoo {
+public class FabricaDeVoo {
 
     public static Voo criarVoo() {
         Voo voo = new Voo();
@@ -18,11 +19,7 @@ public class ConstrutorDeVoo {
         return voo;
     }
 
-    private static Aeronave criarAeronave() {
-        Aeronave aeronave = new Aeronave();
-        aeronave.setCapacidadeTotal(30);
-        return aeronave;
-    }
+
 
     private static Rota criarRota() {
         Rota rota = new Rota();

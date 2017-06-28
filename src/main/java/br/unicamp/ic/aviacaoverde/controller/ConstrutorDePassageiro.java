@@ -7,12 +7,15 @@ import br.unicamp.ic.aviacaoverde.model.Passageiro;
  */
 public class ConstrutorDePassageiro {
 
+    private static Passageiro instance;
+
     public static Passageiro criarPassageiro(Integer idPassageiro,
                                               String nome) {
-        Passageiro passageiro = new Passageiro();
-        passageiro.setId(idPassageiro);
-        passageiro.setNome(nome);
-
-        return passageiro;
+        if(instance == null) {
+            instance = new Passageiro();
+            instance .setId(idPassageiro);
+            instance .setNome(nome);
+        }
+        return instance;
     }
 }

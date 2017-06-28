@@ -15,7 +15,7 @@ public class Menu {
     private Voo voo;
 
     public Menu() {
-        voo = ConstrutorDeVoo.criarVoo();
+        voo = FabricaDeVoo.criarVoo();
     }
 
     public void criarReserva(Integer idPassageiro,
@@ -41,9 +41,9 @@ public class Menu {
     }
 
     public Reserva consultaReserva(Integer idPassageiro) {
-        ControladorDeVoo controladorDeVoo = new ControladorDeVoo();
+        ControladorDeReserva controladorDeReserva = new ControladorDeReserva();
 
-        return controladorDeVoo.buscarReserva(idPassageiro, voo);
+        return controladorDeReserva.buscarReserva(idPassageiro, voo);
     }
 
     public void imprimir() {
