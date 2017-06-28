@@ -1,14 +1,17 @@
 package br.unicamp.ic.aviacaoverde.view;
 
-import br.unicamp.ic.aviacaoverde.controller.ConstrutorDeVoo;
 import br.unicamp.ic.aviacaoverde.controller.Menu;
-import br.unicamp.ic.aviacaoverde.model.*;
+import br.unicamp.ic.aviacaoverde.model.Passageiro;
+import br.unicamp.ic.aviacaoverde.model.Reserva;
+import br.unicamp.ic.aviacaoverde.model.Rota;
+import br.unicamp.ic.aviacaoverde.model.Voo;
 
 import java.util.Scanner;
 
 public class Principal {
 
 	private final Scanner scanner;
+	private static Principal instance;
 	private int opcao;
 	private Menu menu;
 
@@ -18,8 +21,15 @@ public class Principal {
 		scanner = new Scanner(System.in);
 	}
 
+	public static Principal getInstance() {
+		if(instance == null) {
+			instance = new Principal();
+		}
+		return instance;
+	}
+
 	public static void main(String[] args) {
-		Principal principal = new Principal();
+		Principal principal = Principal.getInstance();
 		principal.iniciarSistema();
 	}
 
