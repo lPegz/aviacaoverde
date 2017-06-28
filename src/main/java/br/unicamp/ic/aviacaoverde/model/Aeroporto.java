@@ -1,15 +1,10 @@
 package br.unicamp.ic.aviacaoverde.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Aeroporto {
-
 	private String nomeCidade;
-
-	public String getNomeCidade() {
-		return nomeCidade;
-	}
-
-	public void setNomeCidade(String nomeCidade) {
-		this.nomeCidade = nomeCidade;
-	}
-
 }
